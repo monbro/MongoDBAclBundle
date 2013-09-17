@@ -110,12 +110,12 @@ final class UserSecurityIdentity implements SecurityIdentityInterface
      */
     public function equals(SecurityIdentityInterface $sid)
     {
-        exit('asdas');
-        var_dump($this->userId);
-        var_dump($sid->getUsername());
-        var_dump($this->class);
-        var_dump($sid->getClass());
-        exit();
+        // exit('asdas');
+        // var_dump($this->userId);
+        // var_dump($sid->getUsername());
+        // var_dump($this->class);
+        // var_dump($sid->getClass());
+        // exit();
 
         if (!$sid instanceof UserSecurityIdentity) {
             return false;
