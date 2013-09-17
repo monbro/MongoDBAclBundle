@@ -489,12 +489,8 @@ class MutableAclProvider extends AclProvider implements MutableAclProviderInterf
      */
     protected function getSecurityIdentityQuery(SecurityIdentityInterface $sid)
     {
-        var_dump('test');
-        var_dump($sid->getUserId());
-        var_dump($sid->getClass());
-        exit();
         if ($sid instanceof UserSecurityIdentity) {
-            return array('userId' => $sid->getUserId(), 'class' => $sid->getClass());
+            return array('username' => $sid->getUserId(), 'class' => $sid->getClass());
         } else if ($sid instanceof RoleSecurityIdentity) {
             return array('role' => $sid->getRole());
         } else {
